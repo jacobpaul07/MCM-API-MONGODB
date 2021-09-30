@@ -6,7 +6,6 @@ from datetime import datetime
 from pytz import timezone
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-
 from App.Json_Class.TCPProperties_dto import TCPProperties
 from App.Json_Class.TCPdevice_dto import TCPdevice
 from App.Json_Class.index import read_setting

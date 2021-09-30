@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App.apps.mongoConfig',
+    'App',
     'channels',
     'corsheaders',
     'rest_framework',
@@ -81,10 +81,8 @@ WSGI_APPLICATION = 'BoschMCM_API.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'mcm-api',
-        'HOST': 'localhost',
-        'PORT': 27017,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -142,7 +140,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+            "hosts": [('173.22.0.4', 6379)],
         },
     },
 }
