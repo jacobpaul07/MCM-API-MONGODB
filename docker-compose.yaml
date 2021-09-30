@@ -3,9 +3,9 @@ version: '3'
 services:
 
   backend:
-    image: "mcm-mongo:dev"
+    image: "siqsessedge/mcm-mongo:latest"
     ports:
-      - "8080:8000"
+      - "8000:8000"
     depends_on: 
       - redis
       - mongo
@@ -42,6 +42,7 @@ services:
     networks:
       mcm-network:
         ipv4_address: 173.22.0.2
+    restart: always
 
 networks:
   mcm-network:
